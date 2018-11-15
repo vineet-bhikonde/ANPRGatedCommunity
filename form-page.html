@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Material Design Bootstrap</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.min.css" rel="stylesheet">
+    <style>
+        #guestform
+        {
+            display: none;
+        }
+        #foodform
+        {
+            display: none;
+        }
+        #shopform
+        {
+            display: none;
+        }
+        .jumbotron
+        {
+            margin-left: 30px;
+            margin-right: 30px;
+            border-color: #898a9c !important;
+        }
+        .loader {
+        border: 16px solid #f3f3f3; /* Light grey */
+        border-top: 16px solid #3498db; /* Blue */
+        border-bottom: 16px solid #3498db;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+    </style>
+</head>
+
+<body class="grey lighten-3">
+
+  <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+    <div class="container">
+
+      <!-- Brand -->
+      <a class="navbar-brand waves-effect" href="https://mdbootstrap.com/material-design-for-bootstrap/" target="_blank">
+        <strong class="blue-text">APNR Gated community</strong>
+      </a>
+
+      <!-- Collapse -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <!-- Left -->
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link waves-effect" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link waves-effect" href="https://mdbootstrap.com/material-design-for-bootstrap/" target="_blank">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link waves-effect" href="https://mdbootstrap.com/getting-started/" target="_blank">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link waves-effect" href="https://mdbootstrap.com/education/bootstrap/" target="_blank">Support</a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  <!-- Navbar -->
+
+  <!--Main layout-->
+  
+  <main class="mt-5 pt-4">
+    <div class="row" style="margin-top: 50px; margin-left: 10px; margin-right: 10px;">
+        <div class="col-sm-4 mb-3 mb-md-0">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">GUEST OR VISITORS</h5>
+                <p class="card-text">Describe what this panel does</p>
+                <a href="#!" class="btn btn-primary" id="guest">Click here</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 mb-3 mb-md-0">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">FOOD DELIVERY</h5>
+                <p class="card-text">Describe what this panel does</p>
+                <a href="#!" class="btn btn-primary" id="food">Click here</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">SHOPPING DELIVERY</h5>
+                <p class="card-text">Describe what this panel does</p>
+                <a href="#!" class="btn btn-primary" id="shopping">Click here</a>
+              </div>
+            </div>
+          </div>
+    </div>
+      <!-- guest form here -->
+    <div class="container" id="guestform">
+
+      <!-- Heading -->
+      <h2 class="my-5 h2 text-center">Form</h2>
+
+      <!--Grid row-->
+      <div class="row">
+
+        <!--Grid column-->
+        <div class="col-md-12 mb-12">
+
+          <!--Card-->
+          <div class="card">
+
+            <!--Card content-->
+            <form class="card-body">
+
+              <!--Grid row-->
+              <div class="row">
+
+                <!--Grid column-->
+                <div class="col-md-6 mb-2">
+
+                  <!--firstName-->
+                  <div class="md-form ">
+                    <input type="text" id="firstName" class="form-control">
+                    <label for="firstName" class="">Guest First name</label>
+                  </div>
+
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-6 mb-2">
+
+                  <!--lastName-->
+                  <div class="md-form">
+                    <input type="text" id="lastName" class="form-control">
+                    <label for="lastName" class="">Guest Last name</label>
+                  </div>
+
+                </div>
+                <!--Grid column-->
+
+              </div>
+              <!--Grid row-->
+
+              <!--Username-->
+              <div class="md-form input-group pl-0 mb-5">
+                <div class="input-group-prepend">
+                  <i class="fa fa-truck" aria-hidden="true"></i>
+                </div>
+                <input type="text" class="form-control py-0" placeholder="Vehicle Number" aria-describedby="basic-addon1">
+              </div>
+
+              <!--time picker-->
+              <div class="md-form">
+                  <input placeholder="Select time" type="text" id="date-picker-example" class="form-control datepicker">
+                  <label for="date-picker-example">Expected arrival time...</label>
+              </div>
+
+              <!--date picker-->
+              <div class="md-form">
+                  <input placeholder="Select date" type="text" id="date-picker-example" class="form-control datepicker">
+                  <label for="date-picker-example">Expected stay (date)...</label>
+              </div>
+             
+              <hr class="mb-4">
+              <button class="btn btn-primary btn-lg btn-block" type="submit">SUBMIT</button>
+
+            </form>
+
+          </div>
+          <!--/.Card-->
+
+        </div>
+        <!--Grid column-->
+          
+      </div>
+      <!--Grid row-->
+
+    </div>
+      <!-- guest form end here -->
+      
+      <!-- food form start here -->
+    <div class="container" id="foodform">
+
+      <!-- Heading -->
+      <h2 class="my-5 h2 text-center">Form</h2>
+
+      <!--Grid row-->
+      <div class="row">
+
+        <!--Grid column-->
+        <div class="col-md-12 mb-12">
+
+          <!--Card-->
+          <div class="card">
+
+            <!--Card content-->
+            <form class="card-body">
+
+              <!--Grid row-->
+              <div class="row">
+
+                <!--Grid column-->
+                <div class="col-md-6 mb-2">
+
+                  <!--firstName-->
+                  <div class="md-form ">
+                    <input type="text" id="firstName" class="form-control">
+                    <label for="firstName" class="">Company Name</label>
+                  </div>
+
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-6 mb-2">
+
+                  <!--lastName-->
+                  <div class="md-form">
+                    <input type="text" id="lastName" class="form-control">
+                    <label for="lastName" class="">Delivery Executive name</label>
+                  </div>
+
+                </div>
+                <!--Grid column-->
+
+              </div>
+              <!--Grid row-->
+
+              <!--Username-->
+              <div class="md-form input-group pl-0 mb-5">
+                <div class="input-group-prepend">
+                  <i class="fa fa-truck" aria-hidden="true"></i>
+                </div>
+                <input type="text" class="form-control py-0" placeholder="Vehicle Number" aria-describedby="basic-addon1">
+              </div>
+
+              <!--time picker-->
+              <div class="md-form">
+                  <input placeholder="Select time" type="text" class="form-control datepicker">
+                  <label for="date-picker-example">Expected arrival time...</label>
+              </div>
+
+              <!--date picker-->
+              <div class="md-form">
+                  <input placeholder="" type="text"class="form-control datepicker">
+                  <label for="date-picker-example">Order Number</label>
+              </div>
+             
+              <hr class="mb-4">
+              <button class="btn btn-primary btn-lg btn-block" type="submit">SUBMIT</button>
+
+            </form>
+
+          </div>
+          <!--/.Card-->
+
+        </div>
+        <!--Grid column-->
+          
+      </div>
+      <!--Grid row-->
+
+    </div>
+      <!--food form end here -->
+      
+        <!--shopping form end here -->
+    <div class="container" id="shopform">
+
+      <!-- Heading -->
+      <h2 class="my-5 h2 text-center">Form</h2>
+
+      <!--Grid row-->
+      <div class="row">
+
+        <!--Grid column-->
+        <div class="col-md-12 mb-12">
+
+          <!--Card-->
+          <div class="card">
+
+            <!--Card content-->
+            <form class="card-body">
+
+              <!--Grid row-->
+              <div class="row">
+
+                <!--Grid column-->
+                <div class="col-md-6 mb-2">
+
+                  <!--firstName-->
+                  <div class="md-form ">
+                    <input type="text" id="firstName" class="form-control">
+                    <label for="firstName" class="">Company name</label>
+                  </div>
+
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-6 mb-2">
+
+                  <!--lastName-->
+                  <div class="md-form">
+                    <input type="text" id="lastName" class="form-control">
+                    <label for="lastName" class="">Delivery Agent number</label>
+                  </div>
+
+                </div>
+                <!--Grid column-->
+
+              </div>
+              <!--Grid row-->
+
+              <!--Username-->
+              <div class="md-form input-group pl-0 mb-5">
+                <div class="input-group-prepend">
+                  <i class="fa fa-truck" aria-hidden="true"></i>
+                </div>
+                <input type="text" class="form-control py-0" placeholder="Vehicle Number" aria-describedby="basic-addon1">
+              </div>
+
+              <!--time picker-->
+              <div class="md-form">
+                  <input placeholder="Select time" type="text" class="form-control">
+                  <label for="date-picker-example">Expected arrival time...</label>
+              </div>
+
+              <!--date picker-->
+              <div class="md-form">
+                  <input placeholder="Name" type="text" id="date-picker-example" class="form-control">
+                  <label for="date-picker-example">Courier Delivery Service Company</label>
+              </div>
+             
+              <hr class="mb-4">
+              <button class="btn btn-primary btn-lg btn-block" type="submit">SUBMIT</button>
+
+            </form>
+
+          </div>
+          <!--/.Card-->
+
+        </div>
+        <!--Grid column-->
+          
+      </div>
+      <!--Grid row-->
+
+    </div>
+      <!-- form end here -->
+      
+  </main>
+  <!--Main layout-->
+
+  <!--Footer-->
+  <footer class="page-footer text-center font-small mt-4">
+
+    <hr class="my-4">
+
+    <!-- Social icons -->
+    <div class="pb-4">
+      <a href="https://www.facebook.com/mdbootstrap" target="_blank">
+        <i class="fa fa-facebook mr-3"></i>
+      </a>
+
+      <a href="https://twitter.com/MDBootstrap" target="_blank">
+        <i class="fa fa-twitter mr-3"></i>
+      </a>
+
+      <a href="https://www.youtube.com/watch?v=7MUISDJ5ZZ4" target="_blank">
+        <i class="fa fa-youtube mr-3"></i>
+      </a>
+
+      <a href="https://plus.google.com/u/0/b/107863090883699620484" target="_blank">
+        <i class="fa fa-google-plus mr-3"></i>
+      </a>
+
+      <a href="https://dribbble.com/mdbootstrap" target="_blank">
+        <i class="fa fa-dribbble mr-3"></i>
+      </a>
+
+      <a href="https://pinterest.com/mdbootstrap" target="_blank">
+        <i class="fa fa-pinterest mr-3"></i>
+      </a>
+
+      <a href="https://github.com/mdbootstrap/bootstrap-material-design" target="_blank">
+        <i class="fa fa-github mr-3"></i>
+      </a>
+
+      <a href="http://codepen.io/mdbootstrap/" target="_blank">
+        <i class="fa fa-codepen mr-3"></i>
+      </a>
+    </div>
+    <!-- Social icons -->
+
+    <!--Copyright-->
+    <div class="footer-copyright py-3">
+      © 2018 Copyright:
+      <a href="https://mdbootstrap.com/education/bootstrap/" target="_blank"> MDBootstrap.com </a>
+    </div>
+    <!--/.Copyright-->
+
+  </footer>
+  <!--/.Footer-->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Initializations -->
+  <script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+      
+      $('#guest').click(function(){
+          
+           $('#guestform').show().addClass('animated bounceInLeft');
+          $('#foodform').hide();
+          $('#shopform').hide();
+      });
+      $('#food').click(function(){
+          
+           $('#foodform').show().addClass('animated bounceInLeft');
+          $('#guestform').hide();
+          $('#shopform').hide();
+      });
+      $('#shopping').click(function(){
+           $('#shopform').show().addClass('animated bounceInLeft');
+          $('#foodform').hide();
+          $('#guestform').hide();
+      });
+      
+     
+  </script>
+</body>
+
+</html>
