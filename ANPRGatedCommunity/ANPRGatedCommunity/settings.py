@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'ANPRGatedCommunity.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ANPRGatedCommunity',
+        'NAME': 'anprgatedcommunity',
         'USER': 'root',
         'PASSWORD': 'root123',
         'HOST': 'localhost',
@@ -122,3 +122,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS=[
+    'static'
+]
